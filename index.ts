@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import { $ } from "bun";
 
 const branch = process.argv[2] ?? "main";
