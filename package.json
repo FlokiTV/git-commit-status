@@ -1,6 +1,7 @@
 {
   "name": "git-commit-status",
   "module": "index.ts",
+  "bin": "index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
