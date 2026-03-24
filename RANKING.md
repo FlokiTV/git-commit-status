@@ -2,27 +2,38 @@
 
 **Branch:** `main`
 **Data:** 24/03/2026
-**Total de commits:** 0
+**Total de commits:** 4
 
 ## 🧠 Ranking Geral
-Nenhum autor com mais de 5 commits para montar o ranking geral.
+| Posição | Jogador | Linhas | Commits | Pontuação | Code Streak Máx. |
+| --- | --- | ---: | ---: | ---: | ---: |
+| 1 | 🥇 FlokiTV | 407 | 4 | 400 XP | 💻 2 dias |
 
 ## 📅 Ranking Semanal (Segunda a Domingo)
 **Período:** 23/03/2026 a 29/03/2026
-Nenhum autor com mais de 5 commits no ranking semanal.
+| Posição | Jogador | Linhas | Commits | Pontuação |
+| --- | --- | ---: | ---: | ---: |
+| 1 | 🥇 FlokiTV | 407 | 4 | 400 XP |
 
 ### 🗂️ Heatmap Semanal
-Sem dados para heatmap semanal.
+| Autor | Seg | Ter | Qua | Qui | Sex | Sáb | Dom |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| FlokiTV | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 
-## 🗓️ Ranking Mensal (30 dias)
-**Período:** 23/02/2026 a 24/03/2026
-Nenhum autor com mais de 5 commits no ranking mensal.
+## 🗓️ Ranking Mensal (31 dias)
+**Período:** 01/03/2026 a 31/03/2026
+| Posição | Jogador | Linhas | Commits | Pontuação |
+| --- | --- | ---: | ---: | ---: |
+| 1 | 🥇 FlokiTV | 407 | 4 | 400 XP |
 
 ### 🗂️ Heatmap Mensal
-Sem dados para heatmap mensal.
+| Autor | Heatmap (31 dias) |
+| --- | --- |
+| FlokiTV | ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🟩🟩⬜⬜⬜⬜⬜⬜⬜ |
 
 ## 🎮 Regras de Pontuação
 - Cada commit vale **100 XP**.
-- Todos os rankings só exibem quem tiver **mais de 5 commits**.
+- A posição no ranking é definida por: **Linhas alteradas > Commits > Code Streak**.
+- Todos os rankings só exibem quem tiver **mais de 1 commits**.
 - Code Streak conta dias seguidos com commit; se ficar 1 dia sem, zera.
 - Em caso de empate, o nome do autor define a ordem.
