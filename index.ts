@@ -1,8 +1,31 @@
 #!/usr/bin/env bun
 import { $ } from "bun";
+import { parseArgs } from "util";
 
-const branch = process.argv[2] ?? "main";
-const fileName = process.argv[3] ?? "RANKING.md";
+// cmd example: bunx github:FlokiTV/git-commit-status --branch=main --fileName=RANKING.md --minCommits=10
+const { values } = parseArgs({
+  args: Bun.argv,
+  options: {
+    branch: {
+      type: 'string',
+      default: 'main',
+    },
+    fileName: {
+      type: 'string',
+      default: 'RANKING.md',
+    },
+    minCommits: {
+      type: 'string',
+      default: '10',
+    },
+  },
+  strict: true,
+  allowPositionals: true,
+});
+
+const branch = values.branch;
+const fileName = values.fileName;
+const minCommits = Number(values.minCommits);
 const logOutput = await $`git log ${branch} --pretty=format:"COMMIT|%an|%ad" --numstat --date=short`.text();
 
 const commits: { author: string; date: string; lines: number }[] = [];
@@ -106,7 +129,7 @@ const getRanking = (sourceCommits: { author: string; date: string; lines: number
   );
 };
 
-const minimumCommits = 1;
+const minimumCommits = minCommits;
 const ranking = getRanking(commits);
 const filteredRanking = ranking.filter((stat) => stat.commits > minimumCommits);
 
