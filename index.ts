@@ -193,7 +193,7 @@ const rankingRows = filteredRanking
   .map((stat, index) => {
     const position = index + 1;
     const badge = medal[index] ?? "🏅";
-    const score = stat.commits * 100;
+    const score = (stat.commits * 100) + stat.lines;
     return `| ${position} | ${badge} ${stat.author} | ${stat.lines} | ${stat.commits} | ${score} XP | 💻 ${stat.streak} dias |`;
   })
   .join("\n");
@@ -203,7 +203,7 @@ const createPeriodRows = (periodRanking: AuthorStats[]): string =>
     .map((stat, index) => {
       const position = index + 1;
       const badge = medal[index] ?? "🏅";
-      const score = stat.commits * 100;
+      const score = (stat.commits * 100) + stat.lines;
       return `| ${position} | ${badge} ${stat.author} | ${stat.lines} | ${stat.commits} | ${score} XP |`;
     })
     .join("\n");
@@ -265,6 +265,7 @@ const markdown = [
   "",
   "## 🎮 Regras de Pontuação",
   "- Cada commit vale **100 XP**.",
+  "- Cada linha alterada (adicionada ou removida) vale **1 XP**.",
   "- A posição no ranking é definida por: **Linhas alteradas > Commits > Code Streak**.",
   `- Todos os rankings só exibem quem tiver **mais de ${minimumCommits} commits**.`,
   "- Code Streak conta dias seguidos com commit; se ficar 1 dia sem, zera.",
